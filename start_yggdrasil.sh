@@ -1,1 +1,1 @@
-sudo service yggdrasil start
+sudo yggdrasil -useconffile /etc/yggdrasil.conf
