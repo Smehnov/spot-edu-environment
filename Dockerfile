@@ -31,4 +31,5 @@ RUN sudo apt-get update
 RUN sudo apt-get install yggdrasil
 COPY yggdrasil.conf /etc/yggdrasil.conf
 COPY start_yggdrasil.sh start_yggdrasil.sh 
-ENTRYPOINT ['start_yggdrasil.sh']
+RUN chmod 777 ./start_yggdrasil.sh
+ENTRYPOINT ['sudo start_yggdrasil.sh']
