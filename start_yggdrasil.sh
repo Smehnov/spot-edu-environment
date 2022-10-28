@@ -1,1 +1,1 @@
-yggdrasil -useconffile yggdrasil.conf
+yggdrasil -useconffile /etc/yggdrasil.conf
