@@ -29,6 +29,8 @@ RUN echo 'deb [signed-by=/usr/local/apt-keys/yggdrasil-keyring.gpg] http://neila
 RUN sudo apt-get update
 
 RUN sudo apt-get install yggdrasil
+RUN sudo chmod 777 /etc/yggdrasil.conf
+RUN sudo yggdrasil -genconf > /etc/yggdrasil.conf
 COPY prepare_yggdrasil.py prepare_yggdrasil.py 
 RUN sudo python3 prepare_yggdrasil.py
 COPY start_yggdrasil.sh start_yggdrasil.sh 
